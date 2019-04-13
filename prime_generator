@@ -1,0 +1,44 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+int isprime(long long int);
+long long int a,b;
+void prime(long long int v)
+{
+	long long int i;
+	for(i=v;i<=b;i++)
+{
+ if	(i==2)
+cout<<i<<endl;
+
+else if(i%2!=0&&i>2)
+		{
+if(isprime(i)==1)
+cout<<i<<endl;
+}
+}
+}
+int isprime(long long int d)
+{
+	long long int i,j;
+	long long int cnt=0;
+	j=sqrt(d);
+	for(i=2;i<=j;i++)
+	{
+		if(d%i==0)
+			return 0;
+	}
+	return 1;
+}
+int main() {
+int T;
+cin>>T;
+while(T)
+{
+	cin>>a;
+	cin>>b;
+	prime(a);
+	T--;
+}
+return 0;
+}
